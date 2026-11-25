@@ -1,0 +1,253 @@
+:root {
+  --kalos-navy: #101d2e;
+  --kalos-navy-light: #1b2c43;
+  --kalos-gold: #c8a13a;
+  --kalos-gold-dark: #a98424;
+  --kalos-cream: #faf8f4;
+  --kalos-muted: #6b7280;
+}
+
+body {
+  background: var(--kalos-cream);
+  color: #1c2533;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.kalos-navbar {
+  background: var(--kalos-navy);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .18);
+}
+
+.kalos-navbar .navbar-brand {
+  color: var(--kalos-gold);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.kalos-navbar .nav-link {
+  color: #e7ecf3;
+  font-size: .94rem;
+}
+
+.kalos-navbar .nav-link:hover,
+.kalos-navbar .nav-link.active {
+  color: var(--kalos-gold);
+}
+
+.btn-kalos {
+  background: var(--kalos-gold);
+  border-color: var(--kalos-gold);
+  color: var(--kalos-navy);
+  font-weight: 600;
+}
+
+.btn-kalos:hover,
+.btn-kalos:focus {
+  background: var(--kalos-gold-dark);
+  border-color: var(--kalos-gold-dark);
+  color: #fff;
+}
+
+.btn-outline-kalos {
+  border-color: var(--kalos-gold);
+  color: var(--kalos-gold-dark);
+  font-weight: 600;
+}
+
+.btn-outline-kalos:hover {
+  background: var(--kalos-gold);
+  color: var(--kalos-navy);
+}
+
+.hero-kalos {
+  background: linear-gradient(120deg, rgba(16, 29, 46, .96), rgba(32, 52, 78, .86)),
+    radial-gradient(circle at 80% 20%, rgba(200, 161, 58, .45), transparent 45%);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 4.5rem 2rem;
+}
+
+.hero-kalos h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.hero-kalos .accent {
+  color: var(--kalos-gold);
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--kalos-navy);
+  position: relative;
+  padding-bottom: .6rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--kalos-gold);
+  margin-top: .5rem;
+}
+
+.category-card {
+  border: none;
+  border-radius: .9rem;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(16, 29, 46, .07);
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(16, 29, 46, .14);
+}
+
+.category-icon {
+  font-size: 2.2rem;
+}
+
+.product-card {
+  border: none;
+  border-radius: .85rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(16, 29, 46, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(16, 29, 46, .16);
+}
+
+.product-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: var(--kalos-navy-light);
+}
+
+.product-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #142338, #2b4465);
+}
+
+.product-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 4.5rem;
+  color: var(--kalos-gold);
+  opacity: .85;
+}
+
+.badge-kalos {
+  position: absolute;
+  top: .7rem;
+  left: .7rem;
+  z-index: 2;
+  background: var(--kalos-gold);
+  color: var(--kalos-navy);
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: .3rem .7rem;
+  font-size: .72rem;
+  text-transform: uppercase;
+}
+
+.discount-kalos {
+  position: absolute;
+  top: .7rem;
+  right: .7rem;
+  z-index: 2;
+  background: #b23a48;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: .3rem .7rem;
+  font-size: .72rem;
+}
+
+.product-card .card-title a {
+  color: var(--kalos-navy);
+  text-decoration: none;
+}
+
+.product-card .card-title a:hover {
+  color: var(--kalos-gold-dark);
+}
+
+.price-kalos {
+  color: var(--kalos-navy);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.summary-box {
+  background: #fff;
+  border: 1px solid #ece5d5;
+  border-radius: .85rem;
+  box-shadow: 0 6px 20px rgba(16, 29, 46, .06);
+}
+
+.payment-method-card {
+  border: 2px solid #e5e0d5;
+  border-radius: .75rem;
+  background: #fff;
+  padding: .9rem 1rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+
+.payment-method-card:hover {
+  border-color: var(--kalos-gold);
+}
+
+.payment-method-card.active {
+  border-color: var(--kalos-gold);
+  background: #fffdf5;
+}
+
+.kalos-footer {
+  background: var(--kalos-navy);
+  color: #ced7e3;
+}
+
+.kalos-footer a {
+  color: #ced7e3;
+  text-decoration: none;
+}
+
+.kalos-footer a:hover {
+  color: var(--kalos-gold);
+}
+
+.table-kalos thead {
+  background: var(--kalos-navy);
+  color: #fff;
+}
+
+.alert-kalos-note {
+  background: #fff8e6;
+  border: 1px solid #f0dfa8;
+}
+
+@media (max-width: 576px) {
+  .hero-kalos { padding: 3rem 1.4rem; }
+  .product-image { height: 190px; }
+}
